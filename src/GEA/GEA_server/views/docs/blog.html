@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="gea is a perfect theme for showcasing your new app, company or project.">
+    <title>Blog - gea</title>
+
+    <!-- CSS-->
+    <link href="prism.css" rel="stylesheet">
+    <link href="../css/gea-materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="../css/docs.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper"><a class="page-title">Blog</a></div>
+        </div>
+      </nav>
+      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons white-text">menu</i></a></div>
+      <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo"><a id="logo-container" href="http://materializecss.com/" class="brand-logo"><img class="materialize-logo" src="../images/gea_round.png" alt=""></a></li>
+        <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+              <a class="collapsible-header active waves-effect waves-teal">CSS</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-teal" href="color.html">Color</a></li>
+                  <li><a class="waves-effect waves-teal" href="basic-elements.html">Basic Elements</a></li>
+                  <li><a class="waves-effect waves-teal" href="devices.html">Devices</a></li>
+                  <li><a class="waves-effect waves-teal" href="pricing.html">Pricing Table</a></li>
+                  <li class="active"><a class="waves-effect waves-teal" href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold active">
+              <a class="collapsible-header waves-effect waves-teal">Transitions</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-teal" href="transitions.html">Transition Options</a></li>
+                  <li><a class="waves-effect waves-teal" href="element-transitions.html">Element</a></li>
+                  <li><a class="waves-effect waves-teal" href="section-transitions.html">Section</a></li>
+                  <li><a class="waves-effect waves-teal" href="intro-transitions.html">Intro</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col s12 m9 l10">
+
+      <!-- Cards Section-->
+      <div id="title" class="section scrollspy">
+        <p class="caption">Blogs are great for giving light to the inner workings of your life, company, product, etc. We've aimed for a simple and clean blog feel with emphasis on the content.</p>
+        <a href="../blog.html" class="btn dark">View Demo</a>
+
+        <h2 class="header">Title Transition</h2>
+        <p class="caption">
+          A captivating, full page transition that elegantly leads into the article text.
+        </p>
+        <div class="row">
+          <div class="col s12">
+            <pre><code class="language-markup">
+  &lt;div class="title-transition section white valign-wrapper">
+    &lt;div class="row valign">
+      &lt;div class="col s6 offset-s3 blog-title fade-transition">
+        &lt;h1>Something Interesting&lt;/h1>
+        &lt;span class="date">January 31, 2016&lt;/span>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div></code></pre>
+          <br>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="author" class="section scrollspy">
+        <div class="row">
+          <!-- Pullup Card -->
+          <div class="col s12">
+            <h2 class="header">Author Element</h2>
+            <p class="caption">
+              Use this author element to show who wrote the article and when. The author avatar has a border hover animation as well.
+            </p>
+
+            <div class="blog-author">
+              <div class="divider"></div>
+
+              <div class="avatar-wrapper">
+                <div class="avatar">
+                  <img src="http://placehold.it/128x128" alt="">
+                </div>
+              </div>
+
+              <div class="author">
+                <span>Author</span>
+                Jane Doe
+              </div>
+
+              <div class="date">
+                <span>2016</span>
+                January 31st
+              </div>
+
+              <div class="divider"></div>
+            </div>
+
+          </div>
+          <div class="col s12">
+            <br>
+            <pre><code class="language-markup">
+  &lt;div class="blog-author">
+    &lt;div class="divider">&lt;/div>
+
+    &lt;div class="avatar-wrapper">
+      &lt;div class="avatar">
+        &lt;img src="http://placehold.it/128x128" alt="">
+      &lt;/div>
+    &lt;/div>
+
+    &lt;div class="author">
+      &lt;span>Author&lt;/span>
+      Jane Doe
+    &lt;/div>
+
+    &lt;div class="date">
+      &lt;span>2016&lt;/span>
+      January 31st
+    &lt;/div>
+
+    &lt;div class="divider">&lt;/div>
+  &lt;/div></code></pre>
+            <br>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="related" class="section scrollspy">
+        <div class="row">
+          <!-- Small Card -->
+          <div class="col s12">
+            <h2 class="header">Related Element</h2>
+            <p class="caption">You can show related articles with this element. It is similar in style to the author element giving things a cohesive look. </p>
+            <div class="blog-related">
+              <ul>
+                <li>
+                  <a href="#">
+                    <span class="avatar-wrapper">
+                      <span class="avatar">
+                        <img src="http://placehold.it/128x128" alt="">
+                      </span>
+                    </span>
+                    <span class="title">The Greatest Blog Article</span>
+                    <span class="date">12 / 23 / 2015</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="avatar-wrapper">
+                      <span class="avatar">
+                        <img src="http://placehold.it/128x128" alt="">
+                      </span>
+                    </span>
+                    <span class="title">Interesting New Technology</span>
+                    <span class="date">10 / 4 / 2015</span>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+            <pre><code class="language-markup">
+  &lt;div class="blog-related">
+    &lt;ul>
+      &lt;li>
+        &lt;a href="#">
+          &lt;span class="avatar-wrapper">
+            &lt;span class="avatar">
+              &lt;img src="http://placehold.it/128x128" alt="">
+            &lt;/span>
+          &lt;/span>
+          &lt;span class="title">The Greatest Blog Article&lt;/span>
+          &lt;span class="date">12 / 23 / 2015&lt;/span>
+        &lt;/a>
+      &lt;/li>
+
+      &lt;li>
+        &lt;a href="#">
+          &lt;span class="avatar-wrapper">
+            &lt;span class="avatar">
+              &lt;img src="http://placehold.it/128x128" alt="">
+            &lt;/span>
+          &lt;/span>
+          &lt;span class="title">Interesting New Technology&lt;/span>
+          &lt;span class="date">10 / 4 / 2015&lt;/span>
+        &lt;/a>
+      &lt;/li>
+
+    &lt;/ul>
+  &lt;/div></code></pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col hide-on-small-only m3 l2">
+      <div class="toc-wrapper">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#title">Title Transition</a></li>
+            <li><a href="#author">Author</a></li>
+            <li><a href="#related">Related</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col s6 m3">
+            <img class="materialize-logo" src="../images/gea_round.png" alt="">
+            <p>Made with love by Materialize.</p>
+          </div>
+          <div class="col s6 m3">
+            <h5>About</h5>
+            <ul>
+              <li><a href="#!">Blog</a></li>
+              <li><a href="#!">Pricing</a></li>
+              <li><a href="#!">Docs</a></li>
+            </ul>
+          </div>
+          <div class="col s6 m3">
+            <h5>Connect</h5>
+            <ul>
+              <li><a href="#!">Community</a></li>
+              <li><a href="#!">Subscribe</a></li>
+              <li><a href="#!">Email</a></li>
+            </ul>
+          </div>
+          <div class="col s6 m3">
+            <h5>Contact</h5>
+            <ul>
+              <li><a href="#!">Twitter</a></li>
+              <li><a href="#!">Facebook</a></li>
+              <li><a href="#!">Github</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="bin/jquery-2.1.1.min.js"><\/script>'); }
+    </script>
+    <script src="prism.js"></script>
+    <script src="../js/materialize.min.js"></script>
+    <script src="init.js"></script>
+
+  </body>
+</html>

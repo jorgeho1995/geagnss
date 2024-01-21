@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="gea is a perfect theme for showcasing your new app, company or project.">
+    <title>Transitions - gea</title>
+
+    <!-- CSS-->
+    <link href="prism.css" rel="stylesheet">
+    <link href="../css/gea-materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="../css/docs.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper"><a class="page-title">Transitions</a></div>
+        </div>
+      </nav>
+      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons white-text">menu</i></a></div>
+      <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo"><a id="logo-container" href="http://materializecss.com/" class="brand-logo"><img class="materialize-logo" src="../images/gea_round.png" alt=""></a></li>
+        <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+              <a class="collapsible-header waves-effect waves-teal">CSS</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-teal" href="color.html">Color</a></li>
+                  <li><a class="waves-effect waves-teal" href="basic-elements.html">Basic Elements</a></li>
+                  <li><a class="waves-effect waves-teal" href="devices.html">Devices</a></li>
+                  <li><a class="waves-effect waves-teal" href="pricing.html">Pricing Table</a></li>
+                  <li><a class="waves-effect waves-teal" href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+              <a class="collapsible-header active waves-effect waves-teal">Transitions</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li class="active"><a class="waves-effect waves-teal" href="transitions.html">Transition Options</a></li>
+                  <li><a class="waves-effect waves-teal" href="element-transitions.html">Element</a></li>
+                  <li><a class="waves-effect waves-teal" href="section-transitions.html">Section</a></li>
+                  <li><a class="waves-effect waves-teal" href="intro-transitions.html">Intro</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col s12 m9 l10">
+
+      <div id="options" class="section scrollspy">
+        <p class="caption">Every scroll transition is managed by a custom jQuery plugin that handles common options. You can customize these scroll transitions further with these html data options.</p>
+        <div class="row">
+          <div class="col s12">
+            <h4>Transition Data Options</h4>
+            <p class="caption">
+
+            </p>
+            <table class="highlight">
+              <thead>
+                <tr>
+                    <th style="min-width: 200px;">Data Option</th>
+                    <th>Description</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>data-duration</td>
+                  <td>The duration or the distance scrolled for the animation. Units in pixels or percent of window height. (Default: 100%)</td>
+                </tr>
+                <tr>
+                  <td>data-responsivethreshold</td>
+                  <td>You can set a screen width threshold that disables the scroll transition. The threshold is in pixels and whenever the screen width is below the threshold the scroll transition is disabled. It will be reenabled if the screen width becomes bigger than the threshold. (Default: 0)</td>
+                </tr>
+                <tr>
+                  <td>data-staggereddelay</td>
+                  <td>This option is only used for the staggered-transition-wrapper. Define a delay between 1.0 and 0.0, 1.0 meaning no delay and 0.0 being max delay. (Default: 0.8)</td>
+                </tr>
+
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="methods" class="section scrollspy">
+        <div class="row">
+          <div class="col s12">
+            <h4>Transition Methods</h4>
+            <table class="highlight">
+              <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>destroy</td>
+                  <td>Destroy the scroll transition plugin on this instance.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="triggered" class="section scrollspy">
+        <div class="row">
+          <div class="col s12">
+            <h4>Scroll Triggered Transition</h4>
+            <p class="caption">
+              If you don't want your transition tied directly to your scroll and instead want the more traditional way of using scroll just to trigger the animation, simply set the <code class="language-markup inline">data-duration</code> to 0.
+            </p>
+            <pre><code class="language-markup">
+  &lt;div class="card fade-in-out up-in-out" data-duration="0">
+    &lt;div class="card-image">
+      &lt;a href="blog.html">&lt;img src="images/poly5.jpg">&lt;/a>
+      &lt;span class="card-title">Why Are You Still Reading?&lt;/span>
+    &lt;/div>
+  &lt;/div></code></pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col hide-on-small-only m3 l2">
+      <div class="toc-wrapper">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#options">Data Options</a></li>
+            <li><a href="#methods">Methods</a></li>
+            <li><a href="#triggered">Scroll Triggered</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    </main>
+        <footer class="page-footer">
+      <div class="row">
+        <div class="col s10 offset-s1">
+          <div class="row">
+            <div class="col s6 m3">
+              <img class="materialize-logo" src="../images/gea_round.png" alt="">
+              <p>Made with love by Materialize.</p>
+            </div>
+            <div class="col s6 m3">
+              <h5>About</h5>
+              <ul>
+                <li><a href="#!">Blog</a></li>
+                <li><a href="#!">Pricing</a></li>
+                <li><a href="#!">Docs</a></li>
+              </ul>
+            </div>
+            <div class="col s6 m3">
+              <h5>Connect</h5>
+              <ul>
+                <li><a href="#!">Community</a></li>
+                <li><a href="#!">Subscribe</a></li>
+                <li><a href="#!">Email</a></li>
+              </ul>
+            </div>
+            <div class="col s6 m3">
+              <h5>Contact</h5>
+              <ul>
+                <li><a href="#!">Twitter</a></li>
+                <li><a href="#!">Facebook</a></li>
+                <li><a href="#!">Github</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="bin/jquery-2.1.1.min.js"><\/script>'); }
+    </script>
+    <script src="prism.js"></script>
+    <script src="../js/materialize.min.js"></script>
+    <script src="init.js"></script>
+
+  </body>
+</html>

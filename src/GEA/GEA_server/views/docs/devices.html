@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="gea is a perfect theme for showcasing your new app, company or project.">
+    <title>Devices - gea</title>
+
+    <!-- CSS-->
+    <link href="prism.css" rel="stylesheet">
+    <link href="../css/gea-materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="../css/docs.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper"><a class="page-title">Devices</a></div>
+        </div>
+      </nav>
+      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons white-text">menu</i></a></div>
+      <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo"><a id="logo-container" href="http://materializecss.com/" class="brand-logo"><img class="materialize-logo" src="../images/gea_round.png" alt=""></a></li>
+        <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+              <a class="collapsible-header active waves-effect waves-teal">CSS</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-teal" href="color.html">Color</a></li>
+                  <li><a class="waves-effect waves-teal" href="basic-elements.html">Basic Elements</a></li>
+                  <li class="active"><a class="waves-effect waves-teal" href="devices.html">Devices</a></li>
+                  <li><a class="waves-effect waves-teal" href="pricing.html">Pricing Table</a></li>
+                  <li><a class="waves-effect waves-teal" href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+              <a class="collapsible-header waves-effect waves-teal">Transitions</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-teal" href="transitions.html">Transition Options</a></li>
+                  <li><a class="waves-effect waves-teal" href="element-transitions.html">Element</a></li>
+                  <li><a class="waves-effect waves-teal" href="section-transitions.html">Section</a></li>
+                  <li><a class="waves-effect waves-teal" href="intro-transitions.html">Intro</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col s12 m9 l10">
+
+  <!-- Cards Section-->
+      <div id="basic" class="section scrollspy">
+        <p class="caption">Device mockups and previews are a useful component in product websites. These devices are incredibly flexible allowing many combinations and groupings and integrates well with all the scrolling effects.</p>
+        <div class="row">
+          <div class="col s12">
+            <div class="row">
+              <div class="col s4">
+                <div class="desktop-preview-sizer">
+                  <div class="desktop-preview"></div>
+                  <div class="image-container active" style="background-image:url(http://placehold.it/600x400)"></div>
+                </div>
+              </div>
+              <div class="col s4">
+                <div class="laptop-preview-sizer">
+                  <div class="laptop-preview"></div>
+                  <div class="image-container active" style="background-image:url(http://placehold.it/600x400)"></div>
+                </div>
+              </div>
+              <div class="col s2">
+                <div class="tablet-preview-sizer">
+                  <div class="tablet-preview"></div>
+                  <div class="image-container active" style="background-image:url(http://placehold.it/600x400)"></div>
+                </div>
+              </div>
+              <div class="col s2">
+                <div class="phone-preview-sizer">
+                  <div class="phone-preview"></div>
+                  <div class="image-container active" style="background-image:url(http://placehold.it/600x400)"></div>
+                </div>
+              </div>
+            </div>
+            <br>
+
+            <h4>HTML Markup</h4>
+            <p class="caption">
+              Set the preview image of the device in the background-image of the <code class="language-markup inline">image-container</code>. You can have multiple image-containers but the one with the class <code class="language-markup inline">active</code> will be the visible one.
+            </p>
+            <pre><code class="language-markup">
+  &lt;!-- Desktop -->
+  &lt;div class="desktop-preview-sizer">
+    &lt;div class="desktop-preview">&lt;/div>
+    &lt;div class="image-container active" style="background-image:url(http://placehold.it/600x400)">&lt;/div>
+  &lt;/div>
+
+  &lt;!-- Laptop -->
+  &lt;div class="laptop-preview-sizer">
+    &lt;div class="laptop-preview">&lt;/div>
+    &lt;div class="image-container active" style="background-image:url(http://placehold.it/600x400)">&lt;/div>
+  &lt;/div>
+
+  &lt;!-- Tablet -->
+  &lt;div class="tablet-preview-sizer">
+    &lt;div class="tablet-preview">&lt;/div>
+    &lt;div class="image-container active" style="background-image:url(http://placehold.it/600x400)">&lt;/div>
+  &lt;/div>
+
+  &lt;!-- Phone -->
+  &lt;div class="phone-preview-sizer">
+    &lt;div class="phone-preview">&lt;/div>
+    &lt;div class="image-container active" style="background-image:url(http://placehold.it/600x400)">&lt;/div>
+  &lt;/div></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="pairs" class="section scrollspy">
+        <div class="row">
+          <!-- Image Card -->
+          <div class="col s12">
+            <h2 class="header">Device Pairs</h2>
+            <p class="caption">
+              You can combine devices in a paired grouping to preview your images. Add the <code class="language-markup inline">right-side</code> class to the wrapping div to change the directional orientation.
+            </p>
+
+            <!-- Phone / Phone -->
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="device-pair">
+                  <div class="phone-preview-sizer">
+                    <div class="phone-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="phone-preview-sizer">
+                    <div class="phone-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="device-pair right-side">
+                  <div class="phone-preview-sizer iphone">
+                    <div class="phone-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="phone-preview-sizer iphone">
+                    <div class="phone-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tablet / Tablet -->
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="device-pair">
+                  <div class="tablet-preview-sizer">
+                    <div class="tablet-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="tablet-preview-sizer">
+                    <div class="tablet-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="device-pair right-side">
+                  <div class="tablet-preview-sizer white">
+                    <div class="tablet-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="tablet-preview-sizer white">
+                    <div class="tablet-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tablet / Phone -->
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="device-pair">
+                  <div class="tablet-preview-sizer">
+                    <div class="tablet-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="phone-preview-sizer">
+                    <div class="phone-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="device-pair right-side">
+                  <div class="tablet-preview-sizer white">
+                    <div class="tablet-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="phone-preview-sizer iphone">
+                    <div class="phone-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Laptop / Tablet -->
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="device-pair">
+                  <div class="laptop-preview-sizer">
+                    <div class="laptop-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="tablet-preview-sizer">
+                    <div class="tablet-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="device-pair right-side">
+                  <div class="laptop-preview-sizer white">
+                    <div class="laptop-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="tablet-preview-sizer white">
+                    <div class="tablet-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Laptop / Phone -->
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="device-pair">
+                  <div class="laptop-preview-sizer">
+                    <div class="laptop-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="phone-preview-sizer">
+                    <div class="phone-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="device-pair right-side">
+                  <div class="laptop-preview-sizer white">
+                    <div class="laptop-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="phone-preview-sizer iphone">
+                    <div class="phone-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desktop / Tablet -->
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="device-pair">
+                  <div class="desktop-preview-sizer">
+                    <div class="desktop-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="tablet-preview-sizer">
+                    <div class="tablet-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="device-pair right-side">
+                  <div class="desktop-preview-sizer">
+                    <div class="desktop-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="tablet-preview-sizer white">
+                    <div class="tablet-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desktop / Phone -->
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="device-pair">
+                  <div class="desktop-preview-sizer">
+                    <div class="desktop-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="phone-preview-sizer">
+                    <div class="phone-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="device-pair right-side">
+                  <div class="desktop-preview-sizer">
+                    <div class="desktop-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="phone-preview-sizer iphone">
+                    <div class="phone-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desktop / Laptop -->
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="device-pair">
+                  <div class="desktop-preview-sizer">
+                    <div class="desktop-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="laptop-preview-sizer">
+                    <div class="laptop-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="device-pair right-side">
+                  <div class="desktop-preview-sizer">
+                    <div class="desktop-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                  <div class="laptop-preview-sizer white">
+                    <div class="laptop-preview"></div>
+                    <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col s12">
+            <br>
+            <pre><code class="language-markup">
+  &lt;!-- Try out different combinations -->
+  &lt;div class="device-pair">
+
+    &lt;!-- Main Device -->
+    &lt;div class="desktop-preview-sizer">
+      &lt;div class="desktop-preview">&lt;/div>
+      &lt;div class="image-container default" style="background-image:url(http://placehold.it/600x400)">&lt;/div>
+    &lt;/div>
+
+    &lt;!-- Accent -->
+    &lt;div class="laptop-preview-sizer">
+      &lt;div class="laptop-preview">&lt;/div>
+      &lt;div class="image-container default" style="background-image:url(http://placehold.it/600x400)">&lt;/div>
+    &lt;/div>
+  &lt;/div></code></pre>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div id="triplets" class="section scrollspy">
+        <div class="row">
+          <!-- Pullup Card -->
+          <div class="col s12">
+            <h2 class="header">Device Triplets</h2>
+            <p class="caption">
+              A triplet of devices that is great for showing multiple screens or products.
+            </p>
+
+            <div class="device-triplet">
+              <div class="tablet-preview-sizer">
+                <div class="tablet-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+              <div class="tablet-preview-sizer">
+                <div class="tablet-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+              <div class="tablet-preview-sizer">
+                <div class="tablet-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+            </div>
+
+            <div class="device-triplet">
+              <div class="phone-preview-sizer iphone">
+                <div class="phone-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+              <div class="phone-preview-sizer iphone">
+                <div class="phone-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+              <div class="phone-preview-sizer iphone">
+                <div class="phone-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+            </div>
+
+            <div class="device-triplet">
+              <div class="tablet-preview-sizer">
+                <div class="tablet-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+              <div class="phone-preview-sizer">
+                <div class="phone-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+              <div class="phone-preview-sizer">
+                <div class="phone-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+            </div>
+
+            <div class="device-triplet">
+              <div class="laptop-preview-sizer white">
+                <div class="laptop-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+              <div class="phone-preview-sizer iphone">
+                <div class="phone-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+              <div class="tablet-preview-sizer white">
+                <div class="tablet-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+            </div>
+
+            <div class="device-triplet">
+              <div class="desktop-preview-sizer">
+                <div class="desktop-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+              <div class="phone-preview-sizer">
+                <div class="phone-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+              <div class="tablet-preview-sizer">
+                <div class="tablet-preview"></div>
+                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12">
+            <br>
+            <pre><code class="language-markup">
+  &lt;!-- Try out different combinations -->
+  &lt;div class="device-triplet">
+
+    &lt;!-- Main Device -->
+    &lt;div class="laptop-preview-sizer white">
+      &lt;div class="laptop-preview">&lt;/div>
+      &lt;div class="image-container default" style="background-image:url(http://placehold.it/600x400)">&lt;/div>
+    &lt;/div>
+
+    &lt;!-- Left Accent Device -->
+    &lt;div class="phone-preview-sizer iphone">
+      &lt;div class="phone-preview">&lt;/div>
+      &lt;div class="image-container default" style="background-image:url(http://placehold.it/600x400)">&lt;/div>
+    &lt;/div>
+
+    &lt;!-- Right Accent Device -->
+    &lt;div class="tablet-preview-sizer white">
+      &lt;div class="tablet-preview">&lt;/div>
+      &lt;div class="image-container default" style="background-image:url(http://placehold.it/600x400)">&lt;/div>
+    &lt;/div>
+  &lt;/div></code></pre>
+            <br>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="col hide-on-small-only m3 l2">
+      <div class="toc-wrapper">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#basic">Markup</a></li>
+            <li><a href="#pairs">Device Pairs</a></li>
+            <li><a href="#triplets">Device Triplets</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    </main>
+        <footer class="page-footer">
+      <div class="row">
+        <div class="col s10 offset-s1">
+          <div class="row">
+            <div class="col s6 m3">
+              <img class="materialize-logo" src="../images/gea_round.png" alt="">
+              <p>Made with love by Materialize.</p>
+            </div>
+            <div class="col s6 m3">
+              <h5>About</h5>
+              <ul>
+                <li><a href="#!">Blog</a></li>
+                <li><a href="#!">Pricing</a></li>
+                <li><a href="#!">Docs</a></li>
+              </ul>
+            </div>
+            <div class="col s6 m3">
+              <h5>Connect</h5>
+              <ul>
+                <li><a href="#!">Community</a></li>
+                <li><a href="#!">Subscribe</a></li>
+                <li><a href="#!">Email</a></li>
+              </ul>
+            </div>
+            <div class="col s6 m3">
+              <h5>Contact</h5>
+              <ul>
+                <li><a href="#!">Twitter</a></li>
+                <li><a href="#!">Facebook</a></li>
+                <li><a href="#!">Github</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="bin/jquery-2.1.1.min.js"><\/script>'); }
+    </script>
+    <script src="prism.js"></script>
+    <script src="../js/materialize.min.js"></script>
+    <script src="init.js"></script>
+
+  </body>
+</html>

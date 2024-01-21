@@ -1,0 +1,1 @@
+qt.qpa.plugin: Could not find the Qt platform plugin "wayland" in ""

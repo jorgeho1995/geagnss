@@ -1,0 +1,38 @@
+{
+    "name": "uint32",
+    "version": "0.2.1",
+    "description": "a javascript library for dealing with (bitwise) uint32 operations",
+    "homepage": "https://www.github.com/fxa/uint32.js",
+    "main": "./uint32",
+    "scripts": {
+        "test": "jshint uint32.js test_uint32.js && jscs uint32.js test_uint32.js && mocha --reporter spec test_uint32",
+        "hint": "jshint uint32.js test_uint32.js && jscs uint32.js test_uint32.js"
+    },
+    "repository":  {
+        "type": "git",
+        "url": "https://github.com/fxa/uin32.js.git"
+    },
+    "keywords": [
+        "uint32", "bitwise", "binary", "shift", "rotate"
+    ],
+    "author": {
+        "name": "Franz X Antesberger",
+        "email": "info@franz-antesberger.de"
+    },
+    "license":  "Do, what You want",
+    "dependencies": {},
+    "devDependencies": {
+        "expect.js": "0.2.0",
+        "mocha": "1.17.1",
+        "jshint": "2.4.3",    
+        "jscs": "latest"    
+    },
+    "files": [
+        ".jscs.json",
+        "README.md",
+        "CHANGELOG.md",
+        "tests.html",
+        "test_uint32.js",
+        "uint32.js"
+    ]
+}

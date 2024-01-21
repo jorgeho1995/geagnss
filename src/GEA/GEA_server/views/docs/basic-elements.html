@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="gea is a perfect theme for showcasing your new app, company or project.">
+    <title>Basic Elements - gea</title>
+
+    <!-- CSS-->
+    <link href="prism.css" rel="stylesheet">
+    <link href="../css/gea-materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="../css/docs.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper"><a class="page-title">Basic Elements</a></div>
+        </div>
+      </nav>
+      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons white-text">menu</i></a></div>
+      <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo"><a id="logo-container" href="http://materializecss.com/" class="brand-logo"><img class="materialize-logo" src="../images/gea_round.png" alt=""></a></li>
+        <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+              <a class="collapsible-header active waves-effect waves-teal">CSS</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-teal" href="color.html">Color</a></li>
+                  <li class="active"><a class="waves-effect waves-teal" href="basic-elements.html">Basic Elements</a></li>
+                  <li><a class="waves-effect waves-teal" href="devices.html">Devices</a></li>
+                  <li><a class="waves-effect waves-teal" href="pricing.html">Pricing Table</a></li>
+                  <li><a class="waves-effect waves-teal" href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+              <a class="collapsible-header waves-effect waves-teal">Transitions</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-teal" href="transitions.html">Transition Options</a></li>
+                  <li><a class="waves-effect waves-teal" href="element-transitions.html">Element</a></li>
+                  <li><a class="waves-effect waves-teal" href="section-transitions.html">Section</a></li>
+                  <li><a class="waves-effect waves-teal" href="intro-transitions.html">Intro</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col s12 m9 l10">
+
+      <!-- Sections section -->
+      <div id="sections" class="section scrollspy">
+        <p class="caption">gea has styled some basic elements to be more cohesive with the design. There are also some additional basic elements that are more specific to this theme's usecase.</p>
+        <h2 class="header">Sections</h2>
+        <p class="caption">Here are some helpful classes to customize your section structure.</p>
+        <table class="highlight">
+          <thead>
+            <tr>
+                <th style="min-width: 200px;">Data Option</th>
+                <th>Description</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>full-height</td>
+              <td>If you have content in a section that overflows past a screen's height you can add this class to let the height expand to the actual content height instead of being restricted.</td>
+            </tr>
+            <tr>
+              <td>half-height</td>
+              <td>Set the height of the section to half of the screen's height.</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+      </div>
+
+      <!-- Buttons Section-->
+      <div id="buttons" class="section scrollspy">
+        <h2 class="header">Buttons</h2>
+        <div class="section black">
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#!" class="btn">Light Button</a>&nbsp;&nbsp;
+          <a href="#!" class="btn"><i class="material-icons left">cloud</i>Light Button</a>&nbsp;&nbsp;
+          <a href="#!" class="btn-large">Light Large Button</a>&nbsp;&nbsp;
+          <a href="#!" class="btn-floating"><i class="material-icons">add</i></a>
+        </div>
+        <div class="section white">
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#!" class="btn dark">Dark Button</a>&nbsp;&nbsp;
+          <a href="#!" class="btn dark"><i class="material-icons left">settings</i>Light Button</a>&nbsp;&nbsp;
+          <a href="#!" class="btn-large dark">Dark Large Button</a>&nbsp;&nbsp;
+          <a href="#!" class="btn-floating dark"><i class="material-icons">edit</i></a>
+        </div>
+        <div class="section light">
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#!" class="btn">Light Button</a>&nbsp;&nbsp;
+          <a href="#!" class="btn"><i class="material-icons left">whatshot</i>Light Button</a>&nbsp;&nbsp;
+          <a href="#!" class="btn-large">Light Large Button</a>&nbsp;&nbsp;
+          <a href="#!" class="btn-floating"><i class="material-icons">menu</i></a>
+        </div>
+        <br>
+        <pre><code class="language-markup">
+  &lt;!-- Light -->
+  &lt;a href="#!" class="btn">Light Button&lt;/a>
+  &lt;a href="#!" class="btn">&lt;i class="material-icons left">cloud&lt;/i>Light Button&lt;/a>
+  &lt;a href="#!" class="btn-large">Light Large Button&lt;/a>
+  &lt;a href="#!" class="btn-floating">&lt;i class="material-icons">add&lt;/i>&lt;/a>
+
+  &lt;!-- Dark -->
+  &lt;a href="#!" class="btn dark">Dark Button&lt;/a>
+  &lt;a href="#!" class="btn dark">&lt;i class="material-icons left">settings&lt;/i>Light Button&lt;/a>
+  &lt;a href="#!" class="btn-large dark">Dark Large Button&lt;/a>
+  &lt;a href="#!" class="btn-floating dark">&lt;i class="material-icons">edit&lt;/i>&lt;/a></code></pre>
+        <br>
+      </div>
+
+      <div id="clients" class="section scrollspy">
+        <div class="row">
+          <!-- Image Card -->
+          <div class="col s12">
+            <h2 class="header">Clients</h2>
+            <p class="caption">This component is great for showcasing client logos.</p>
+
+            <div class="clients">
+              <div class="row">
+                <a href="#!" class="col s12 m6 l4 client white">
+                  <img class="logo" src="http://placehold.it/128x128" alt="google">
+                  <span class="title">Google</span>
+                </a>
+                <a href="#!" class="col s12 m6 l4 client yellow">
+                  <img class="logo" src="http://placehold.it/128x128" alt="snapchat">
+                  <span class="title">Snapchat</span>
+                </a>
+                <a href="#!" class="col s12 m6 l4 client light-blue lighten-4">
+                  <img class="logo" src="http://placehold.it/128x128" alt="messenger">
+                  <span class="title">Messenger</span>
+                </a>
+                <a href="#!" class="col s12 m6 l4 client red lighten-4">
+                  <img class="logo" src="http://placehold.it/128x128" alt="pinterest">
+                  <span class="title">Pinterest</span>
+                </a>
+                <a href="#!" class="col s12 m6 l4 client pink accent-1">
+                  <img class="logo" src="http://placehold.it/128x128" alt="dribbble">
+                  <span class="title">Dribbble</span>
+                </a>
+                <a href="#!" class="col s12 m6 l4 client green accent-3">
+                  <img class="logo" src="http://placehold.it/128x128" alt="medium">
+                  <span class="title">Medium</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12">
+            <br>
+            <pre><code class="language-markup">
+  &lt;div class="clients">
+    &lt;div class="row">
+      &lt;a href="#!" class="col s12 m6 l4 client white">
+        &lt;img class="logo" src="http://placehold.it/128x128" alt="google">
+        &lt;span class="title">Google&lt;/span>
+      &lt;/a>
+      &lt;a href="#!" class="col s12 m6 l4 client yellow">
+        &lt;img class="logo" src="http://placehold.it/128x128" alt="snapchat">
+        &lt;span class="title">Snapchat&lt;/span>
+      &lt;/a>
+      &lt;a href="#!" class="col s12 m6 l4 client light-blue lighten-4">
+        &lt;img class="logo" src="http://placehold.it/128x128" alt="messenger">
+        &lt;span class="title">Messenger&lt;/span>
+      &lt;/a>
+      &lt;a href="#!" class="col s12 m6 l4 client red lighten-4">
+        &lt;img class="logo" src="http://placehold.it/128x128" alt="pinterest">
+        &lt;span class="title">Pinterest&lt;/span>
+      &lt;/a>
+      &lt;a href="#!" class="col s12 m6 l4 client pink accent-1">
+        &lt;img class="logo" src="http://placehold.it/128x128" alt="dribbble">
+        &lt;span class="title">Dribbble&lt;/span>
+      &lt;/a>
+      &lt;a href="#!" class="col s12 m6 l4 client green accent-3">
+        &lt;img class="logo" src="http://placehold.it/128x128" alt="medium">
+        &lt;span class="title">Medium&lt;/span>
+      &lt;/a>
+    &lt;/div>
+  &lt;/div></code></pre>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div id="avatar" class="section scrollspy">
+        <div class="row">
+          <!-- Image Card -->
+          <div class="col s12">
+            <h2 class="header">Avatar</h2>
+            <p class="caption">Showcase users, team members, or any element that needs to show an identifying picture of a person.</p>
+
+            <div class="avatar-demo">
+              <div class="avatar-wrapper">
+                <span class="avatar">
+                  <img src="http://placehold.it/128x128" alt="">
+                </span>
+              </div>
+
+              <div class="team">
+                <div class="avatar-wrapper">
+                  <span class="avatar">
+                    <img src="http://placehold.it/128x128" alt="">
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col s12">
+            <br>
+            <pre><code class="language-markup">
+  &lt;!-- Basic -->
+  &lt;div class="avatar-wrapper">
+    &lt;span class="avatar">
+      &lt;img src="http://placehold.it/128x128" alt="">
+    &lt;/span>
+  &lt;/div>
+
+  &lt;!-- Team -->
+  &lt;div class="team">
+    &lt;div class="avatar-wrapper">
+      &lt;span class="avatar">
+        &lt;img src="http://placehold.it/128x128" alt="">
+      &lt;/span>
+    &lt;/div>
+  &lt;/div></code></pre>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div id="map" class="section scrollspy">
+        <div class="row">
+          <!-- Image Card -->
+          <div class="col s12">
+            <h2 class="header">Google Maps</h2>
+            <p class="caption">Themed Google Maps styles. Here is the HTML markup:</p>
+
+            <pre><code class="language-markup">
+  &lt;div class="section google-map">&lt;/div></code></pre>
+
+            <p class="caption">
+              Here is the script for the Google Maps API. Remember, to use the Google Map APIs you need your own API key. <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">Read more about getting an API key</a>
+            </p>
+
+            <pre><code class="language-markup">
+  &lt;script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE">&lt;/script>
+</code></pre>
+
+            <p class="caption">
+              Below is the javascript initialization of the Google Map embed.
+            </p>
+            <pre><code class="language-javascript">
+  // Google Maps
+  function initMap(mapEl, roadColor, landColor, lat, lng, tooltip) {
+
+    // Specify features and elements to define styles.
+    var styleArray = [
+      { "featureType": "all", stylers: [{ saturation: -80 }] },
+      { "featureType": "water", "elementType": "geometry.fill", "stylers": [{ "color": "#bae8e4" }] },
+      { "featureType": "poi", "elementType": "geometry", "stylers": [{ "visibility": "off" }] },
+      { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#fff" }] },
+      { "featureType": "poi", "stylers": [{ "visibility": "off" }] },
+      { "featureType": "administrative", "stylers": [{ "visibility": "off" }] },
+      { "featureType": "road", "elementType": "geometry.fill", "stylers": [{ "color": roadColor }, { "saturation": "-30" }, { "lightness": "30" }] },
+      { "featureType": "road", "elementType": "geometry.stroke", "stylers": [{ "color": roadColor }, { "saturation": "-30" }, { "lightness": "30" }] },
+      { "featureType": "landscape", "stylers": [{ "color": landColor }] },
+      { "featureType": "transit", "stylers": [{ "color": landColor }] },
+      { "elementType": "labels", "stylers": [{ "visibility": "off" }] },
+      { "elementType": "labels.text", "stylers": [{ "visibility": "on" }] },
+      { "elementType": "labels.icon", "stylers": [{ "visibility": "on" }] }
+    ];
+
+    // Create a map object and specify the DOM element for display.
+    var map = new google.maps.Map(mapEl, {
+      center: {lat: lat, lng: lng},
+      scrollwheel: false,
+      // Apply the map style array to the map.
+      styles: styleArray,
+      zoom: 11
+    });
+
+    // Create a marker and set its position.
+    var marker = new google.maps.Marker({
+      map: map,
+      position: {lat: lat, lng: lng},
+      animation: google.maps.Animation.DROP,
+      title: 'Our Location!'
+    });
+
+    // Marker tooltip.
+    var infowindow = new google.maps.InfoWindow({
+      content: tooltip
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
+    window.setTimeout(function() {
+      infowindow.open(map,marker);
+    }, 1000);
+  }
+
+  // Map variables
+  var lat = 37.7576793;
+  var lng = -122.4;
+  var roadColor = "#7CFFE6";
+  var landColor = "#fafafa";
+  var tooltip = "123 Main Street, San Francisco, CA 94110"
+  var map = $('.google-map').first();
+  if (map.length) {
+    initMap(map[0], roadColor, landColor, lat, lng, tooltip);
+  }
+            </code></pre>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="features" class="section scrollspy">
+        <div class="row">
+          <!-- Pullup Card -->
+          <div class="col s12">
+            <h2 class="header">Icon Features</h2>
+
+            <div class="row">
+              <div class="col s12 m6 l4">
+                <h4><i class="icon-light-bulb"></i></h4>
+                <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+              </div>
+              <div class="col s12 m6 l4">
+                <h4><i class="icon-bolt"></i></h4>
+                <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+              </div>
+              <div class="col s12 m6 l4">
+                <h4><i class="icon-rocket"></i></h4>
+                <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+              </div>
+              <div class="col s12 m6 l4">
+                <h4><i class="icon-settings"></i></h4>
+                <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+              </div>
+              <div class="col s12 m6 l4">
+                <h4><i class="icon-umbrella"></i></h4>
+                <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+              </div>
+              <div class="col s12 m6 l4">
+                <h4><i class="icon-compass"></i></h4>
+                <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col s12">
+            <br>
+            <pre><code class="language-markup">
+  &lt;iv class="row">
+    &lt;div class="col s12 m6 l4">
+      &lt;h4>&lt;i class="icon-light-bulb">&lt;/i>&lt;/h4>
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+    &lt;div class="col s12 m6 l4">
+      &lt;h4>&lt;i class="icon-bolt">&lt;/i>&lt;/h4>
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+    &lt;div class="col s12 m6 l4">
+      &lt;h4>&lt;i class="icon-rocket">&lt;/i>&lt;/h4>
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+    &lt;div class="col s12 m6 l4">
+      &lt;h4>&lt;i class="icon-settings">&lt;/i>&lt;/h4>
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+    &lt;div class="col s12 m6 l4">
+      &lt;h4>&lt;i class="icon-umbrella">&lt;/i>&lt;/h4>
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+    &lt;div class="col s12 m6 l4">
+      &lt;h4>&lt;i class="icon-compass">&lt;/i>&lt;/h4>
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+  &lt;/div></code></pre>
+            <br>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="footer" class="section scrollspy">
+        <div class="row">
+          <!-- Small Card -->
+          <div class="col s12">
+            <h2 class="header">Footer</h2>
+
+            <footer class="page-footer" style="padding-left: 0;">
+              <div class="row">
+                <div class="col s12 m10 offset-m1">
+                  <div class="row">
+                    <div class="col s6 m3">
+                      <img class="materialize-logo" src="../images/gea_round.png" alt="">
+                      <p>Made with love by Materialize.</p>
+                    </div>
+                    <div class="col s6 m3">
+                      <h5>About</h5>
+                      <ul>
+                        <li><a href="#!">Blog</a></li>
+                        <li><a href="#!">Pricing</a></li>
+                        <li><a href="#!">Docs</a></li>
+                      </ul>
+                    </div>
+                    <div class="col s6 m3">
+                      <h5>Connect</h5>
+                      <ul>
+                        <li><a href="#!">Community</a></li>
+                        <li><a href="#!">Subscribe</a></li>
+                        <li><a href="#!">Email</a></li>
+                      </ul>
+                    </div>
+                    <div class="col s6 m3">
+                      <h5>Contact</h5>
+                      <ul>
+                        <li><a href="#!">Twitter</a></li>
+                        <li><a href="#!">Facebook</a></li>
+                        <li><a href="#!">Github</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+            <br>
+
+            <pre><code class="language-markup">
+  &lt;footer class="page-footer">
+    &lt;div class="container">
+      &lt;div class="row">
+        &lt;div class="col s6 m3">
+          &lt;img class="materialize-logo" src="../images/gea_round.png" alt="">
+          &lt;p>Made with love by Materialize.&lt;/p>
+        &lt;/div>
+        &lt;div class="col s6 m3">
+          &lt;h5>About&lt;/h5>
+          &lt;ul>
+            &lt;li>&lt;a href="#!">Blog&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#!">Pricing&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#!">Docs&lt;/a>&lt;/li>
+          &lt;/ul>
+        &lt;/div>
+        &lt;div class="col s6 m3">
+          &lt;h5>Connect&lt;/h5>
+          &lt;ul>
+            &lt;li>&lt;a href="#!">Community&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#!">Subscribe&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#!">Email&lt;/a>&lt;/li>
+          &lt;/ul>
+        &lt;/div>
+        &lt;div class="col s6 m3">
+          &lt;h5>Contact&lt;/h5>
+          &lt;ul>
+            &lt;li>&lt;a href="#!">Twitter&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#!">Facebook&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#!">Github&lt;/a>&lt;/li>
+          &lt;/ul>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/footer></code></pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col hide-on-small-only m3 l2">
+      <div class="toc-wrapper">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#sections">Sections</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#avatar">Avatar</a></li>
+            <li><a href="#map">Google Maps</a></li>
+            <li><a href="#features">Icon Features</a></li>
+            <li><a href="#footer">Footer</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    </main>
+        <footer class="page-footer">
+      <div class="row">
+        <div class="col s10 offset-s1">
+          <div class="row">
+            <div class="col s6 m3">
+              <img class="materialize-logo" src="../images/gea_round.png" alt="">
+              <p>Made with love by Materialize.</p>
+            </div>
+            <div class="col s6 m3">
+              <h5>About</h5>
+              <ul>
+                <li><a href="#!">Blog</a></li>
+                <li><a href="#!">Pricing</a></li>
+                <li><a href="#!">Docs</a></li>
+              </ul>
+            </div>
+            <div class="col s6 m3">
+              <h5>Connect</h5>
+              <ul>
+                <li><a href="#!">Community</a></li>
+                <li><a href="#!">Subscribe</a></li>
+                <li><a href="#!">Email</a></li>
+              </ul>
+            </div>
+            <div class="col s6 m3">
+              <h5>Contact</h5>
+              <ul>
+                <li><a href="#!">Twitter</a></li>
+                <li><a href="#!">Facebook</a></li>
+                <li><a href="#!">Github</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="bin/jquery-2.1.1.min.js"><\/script>'); }
+    </script>
+    <script src="prism.js"></script>
+    <script src="../js/materialize.min.js"></script>
+    <script src="init.js"></script>
+
+  </body>
+</html>

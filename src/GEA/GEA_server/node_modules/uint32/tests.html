@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test Results of uint32</title>
+        <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
+    </head>
+    <body>
+        <h1>Test Results of uint32</h1>
+        <div id="mocha"></div>
+        <script type="text/javascript" src="node_modules/expect.js/expect.js"></script>
+        <script type="text/javascript" src="node_modules/mocha/mocha.js"></script>
+        <script type="text/javascript">mocha.setup('bdd');</script>
+        <script type="text/javascript" src="uint32.js"></script>
+        <script type="text/javascript" src="test_uint32.js"></script>
+        <script>
+            mocha.checkLeaks();
+            mocha.run();
+        </script>
+    </body>
+</html>

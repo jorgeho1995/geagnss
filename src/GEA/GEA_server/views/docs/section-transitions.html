@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="gea is a perfect theme for showcasing your new app, company or project.">
+    <title>Section Transitions - gea</title>
+
+    <!-- CSS-->
+    <link href="prism.css" rel="stylesheet">
+    <link href="../css/gea-materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="../css/docs.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper"><a class="page-title">Section Transitions</a></div>
+        </div>
+      </nav>
+      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons white-text">menu</i></a></div>
+      <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo"><a id="logo-container" href="http://materializecss.com/" class="brand-logo"><img class="materialize-logo" src="../images/gea_round.png" alt=""></a></li>
+        <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+              <a class="collapsible-header waves-effect waves-teal">CSS</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-teal" href="color.html">Color</a></li>
+                  <li><a class="waves-effect waves-teal" href="basic-elements.html">Basic Elements</a></li>
+                  <li><a class="waves-effect waves-teal" href="devices.html">Devices</a></li>
+                  <li><a class="waves-effect waves-teal" href="pricing.html">Pricing Table</a></li>
+                  <li><a class="waves-effect waves-teal" href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+              <a class="collapsible-header active waves-effect waves-teal">Transitions</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-teal" href="transitions.html">Transition Options</a></li>
+                  <li><a class="waves-effect waves-teal" href="element-transitions.html">Element</a></li>
+                  <li class="active"><a class="waves-effect waves-teal" href="section-transitions.html">Section</a></li>
+                  <li><a class="waves-effect waves-teal" href="intro-transitions.html">Intro</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col s12 m9 l10">
+
+      <!-- Cards Section-->
+      <div id="shuffle" class="section scrollspy">
+        <p class="caption">Section transitions are simple and chainable full page transitions. These effects are simple enough to use throughout your page to create a unique separation of your website sections.</p>
+        <h2 class="header">Shuffle</h2>
+        <p class="caption">
+          This basic transition gives the illusion of cards being shuffled. You can specify if the section shuffles over or under by adding the class <code class="language-markup inline">shuffle-over-transition</code> or <code class="language-markup inline">shuffle-under-transition</code>.
+        </p>
+        <a href="../card-shuffle.html" class="btn dark">View Demo</a>
+        <br><br>
+        <pre><code class="language-markup">
+&lt;!-- Shuffle Over -->
+&lt;div class="section black header shuffle-over-transition">
+&lt;div class="header-wrapper row valign-wrapper">
+  &lt;div class="col s8 offset-s2">
+    &lt;h1>gea!&lt;/h1>
+    &lt;span class="tagline">Show off your business in a whole new way.&lt;/span>
+    &lt;button class="read-more">&lt;i class="icon-caret-down">&lt;/i>&lt;/button>
+  &lt;/div>
+&lt;/div>
+&lt;/div>
+
+&lt;!-- Shuffle Under -->
+&lt;div class="section black header shuffle-under-transition">
+&lt;div class="header-wrapper row valign-wrapper">
+  &lt;div class="col s8 offset-s2">
+    &lt;h1>gea!&lt;/h1>
+    &lt;span class="tagline">Show off your business in a whole new way.&lt;/span>
+    &lt;button class="read-more">&lt;i class="icon-caret-down">&lt;/i>&lt;/button>
+  &lt;/div>
+&lt;/div>
+&lt;/div></code></pre>
+        <br>
+      </div>
+
+      <div id="postcards" class="section scrollspy">
+        <div class="row">
+          <!-- Postcards -->
+          <div class="col s12">
+            <h2 class="header">Postcards</h2>
+            <p class="caption">If you want to have uniformly sized cards, you can use our premade size classes. Just add the size class in addition to the card class. </p>
+            <a href="../postcards.html" class="btn dark">View Demo</a>
+            <br><br>
+
+            <pre><code class="language-markup">
+  &lt;div class="flip-out-intro header full-height">
+    &lt;div class="fixed-wrapper">
+      &lt;div class="background">
+        &lt;img src="images/poly5.jpg" alt="">
+      &lt;/div>
+      &lt;div class="header-wrapper row valign-wrapper">
+        &lt;div class="col s8 offset-s2 valign">
+          &lt;h1>gea!&lt;/h1>
+          &lt;span class="tagline">Show off your business in a whole new way.&lt;/span>
+          &lt;button class="read-more">&lt;i class="icon-caret-down">&lt;/i>&lt;/button>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div></code></pre>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col hide-on-small-only m3 l2">
+      <div class="toc-wrapper">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#shuffle">Shuffle</a></li>
+            <li><a href="#postcards">Postcards</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+  </main>
+    <footer class="page-footer">
+      <div class="row">
+        <div class="col s10 offset-s1">
+          <div class="row">
+            <div class="col s6 m3">
+              <img class="materialize-logo" src="../images/gea_round.png" alt="">
+              <p>Made with love by Materialize.</p>
+            </div>
+            <div class="col s6 m3">
+              <h5>About</h5>
+              <ul>
+                <li><a href="#!">Blog</a></li>
+                <li><a href="#!">Pricing</a></li>
+                <li><a href="#!">Docs</a></li>
+              </ul>
+            </div>
+            <div class="col s6 m3">
+              <h5>Connect</h5>
+              <ul>
+                <li><a href="#!">Community</a></li>
+                <li><a href="#!">Subscribe</a></li>
+                <li><a href="#!">Email</a></li>
+              </ul>
+            </div>
+            <div class="col s6 m3">
+              <h5>Contact</h5>
+              <ul>
+                <li><a href="#!">Twitter</a></li>
+                <li><a href="#!">Facebook</a></li>
+                <li><a href="#!">Github</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="bin/jquery-2.1.1.min.js"><\/script>'); }
+    </script>
+    <script src="prism.js"></script>
+    <script src="../js/materialize.min.js"></script>
+    <script src="init.js"></script>
+
+  </body>
+</html>

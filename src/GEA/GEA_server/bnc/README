@@ -1,0 +1,22 @@
+BKG NTRIP Client Version 2.12.18 (Rev. 9505)
+
+The statically linked executable has been compiled on Linux using
+
+Distribution: Debian 8.0, x86_64
+Kernel      : 3.10-3-amd64
+Compiler    : gcc (Debian 4.8.1-10) 4.8.1
+Qt          : QMake version 2.01a Using Qt version 4.8.6
+
+Running this static library BNC build does not require a Qt
+installation on your system. However, it can't support Google Maps (GM)
+and Open StreetMap (OSM) usage which is an optional part of BNC's
+Precise Point Positioning. GM/OSM usage requires a shared library
+BNC build.
+
+If you are not familiar with the BNC program, we suggest to start
+with the Readme.txt file in the Example_Configs directory.
+See bnchelp.pdf for further information.
+
+Federal Agency for Cartography and Geodesy (BKG)
+Frankfurt, May 2022
+euref-ip@bkg.bund.de

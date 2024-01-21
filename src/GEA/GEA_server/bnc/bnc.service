@@ -1,0 +1,15 @@
+[Unit]
+Description=BNC daemon
+Requires=systemd-networkd.service
+After=systemd-networkd.service
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/GEA/GEA_server
+ExecStart=/usr/bin/xvfb-run -a /home/ubuntu/GEA/GEA_server/bnc/bnc-2.12.18-debian8-64bit-static
+ExecStop=/bin/bash -c "killall /home/ubuntu/GEA/GEA_server/bnc/bnc-2.12.18-debian8-64bit-static"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+

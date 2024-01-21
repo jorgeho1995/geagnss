@@ -1,0 +1,248 @@
+/***************
+  HTML Styles
+***************/
+body:not(.black) {
+  color: #444;
+  background-color: #fcfcfc;
+}
+
+p.box {
+  padding: 20px;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.71);
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+body.black p {
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+nav a {
+  -webkit-font-smoothing: antialiased;
+}
+
+code, pre {
+  font-size: 1rem;
+}
+
+.section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: transparent;
+  height: auto;
+  overflow: visible;
+}
+
+.header {
+  font-weight: 300;
+}
+
+.caption {
+  font-size: 1.25rem !important;
+  font-weight: 300 !important;
+  margin-bottom: 30px;
+}
+
+.preview {
+  background-color: #FFF;
+  border: 1px solid #eee;
+  padding: 20px 20px;
+}
+
+header, main, footer {
+  padding-left: 240px;
+}
+footer.page-footer {
+  padding: 20px 0 20px 240px;
+}
+
+.parallax-demo header,
+.parallax-demo main,
+.parallax-demo footer {
+  padding-left: 0;
+}
+
+footer.example {
+  padding-left: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  header, main, footer, footer.page-footer {
+    padding-left: 0;
+  }
+}
+
+/********************
+  Index Page Styles
+********************/
+
+ul.side-nav.fixed li.logo {
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+ul.side-nav.fixed li.logo:hover {
+  background-color: transparent;
+}
+
+ul.side-nav.fixed {
+  overflow: hidden;
+  width: 240px;
+}
+
+ul.side-nav.fixed li {
+  line-height: 44px;
+}
+
+ul.side-nav.fixed li.active {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+ul.side-nav.fixed li a {
+  font-size: 13px;
+  line-height: 44px;
+  height: 44px;
+}
+
+.side-nav .collapsible-body {
+  padding: 0;
+}
+
+.side-nav .collapsible .collapsible-header {
+  padding: 0 32px;
+}
+
+.side-nav .collapsible .collapsible-body li > a {
+  padding: 0 48px;
+}
+
+ul.side-nav.fixed ul.collapsible-accordion {
+  background-color: #FFF;
+}
+
+ul.side-nav.fixed:hover {
+  overflow-y: auto;
+}
+
+.side-nav .collapsible-body>ul:not(.collapsible)>li.active, .side-nav.fixed .collapsible-body>ul:not(.collapsible)>li.active {
+  background-color: #00BFA5;
+}
+
+.bold > a {
+  font-weight: bold;
+}
+
+.google-map {
+  height: 500px;
+}
+
+#logo-container {
+  height: 31px;
+  margin-bottom: 32px;
+}
+#logo-container:hover {
+  background-color: transparent;
+}
+
+nav.top-nav {
+  height: 122px;
+  box-shadow: none;
+  background-color: #00BFA5;
+}
+
+nav.top-nav a.page-title {
+  line-height: 122px;
+  font-size: 48px;
+  color: #fff;
+}
+
+a.button-collapse.top-nav {
+  position: absolute;
+  text-align: center;
+  height: 48px;
+  width: 48px;
+  left: 7.5%;
+  top: 0;
+  float: none;
+  margin-left: 1.5rem;
+  color: #fff;
+  font-size: 32px;
+  z-index: 2;
+}
+
+a.button-collapse.top-nav.full {
+  line-height: 122px;
+}
+
+@media only screen and (max-width: 600px) {
+  a.button-collapse.top-nav {
+    left: 5%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  nav .nav-wrapper {
+    text-align: center;
+  }
+  nav .nav-wrapper a.page-title {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .container {
+    width: 85%;
+  }
+}
+
+
+/* Docs styles */
+.side-nav {
+  background-color: #fff;
+}
+.side-nav li > a {
+  font-weight: 400;
+  color: #444;
+  padding: 0 32px;
+}
+.side-nav li > a::before {
+  display: none;
+}
+.side-nav li.active > a,
+.side-nav li:hover > a,
+.side-nav li > a:hover,
+.side-nav li > a.active {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.avatar-demo .avatar-wrapper,
+.avatar-demo .team {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.device-pair,
+.device-triplet {
+  margin-bottom: 20px;
+}
+
+.pricing-table .pricing-header i {
+  background-color: #fcfcfc;
+}
+.black .pricing-table .pricing-header i {
+  background-color: #000;
+}
+.black .pricing-table {
+  color: #eee;
+}

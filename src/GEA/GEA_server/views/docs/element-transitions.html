@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="gea is a perfect theme for showcasing your new app, company or project.">
+    <title>Element Transitions - gea</title>
+
+    <!-- CSS-->
+    <link href="prism.css" rel="stylesheet">
+    <link href="../css/gea-materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="../css/docs.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper"><a class="page-title">Element Transitions</a></div>
+        </div>
+      </nav>
+      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons white-text">menu</i></a></div>
+      <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo"><a id="logo-container" href="http://materializecss.com/" class="brand-logo"><img class="materialize-logo" src="../images/gea_round.png" alt=""></a></li>
+        <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+              <a class="collapsible-header waves-effect waves-teal">CSS</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-teal" href="color.html">Color</a></li>
+                  <li><a class="waves-effect waves-teal" href="basic-elements.html">Basic Elements</a></li>
+                  <li><a class="waves-effect waves-teal" href="devices.html">Devices</a></li>
+                  <li><a class="waves-effect waves-teal" href="pricing.html">Pricing Table</a></li>
+                  <li><a class="waves-effect waves-teal" href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+              <a class="collapsible-header active waves-effect waves-teal">Transitions</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-teal" href="transitions.html">Transition Options</a></li>
+                  <li class="active"><a class="waves-effect waves-teal" href="element-transitions.html">Element</a></li>
+                  <li><a class="waves-effect waves-teal" href="section-transitions.html">Section</a></li>
+                  <li><a class="waves-effect waves-teal" href="intro-transitions.html">Intro</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col s12 m9 l10">
+
+      <div id="properties" class="section scrollspy">
+        <p class="caption">Element transitions are simple transitions made for small components. Each transition manipulates a simple property which you can combine together. Try adding these transitions to cards, small blocks of text, our device components and more.</p>
+        <h2 class="header">Transition Properties</h2>
+        <p class="caption">
+          Make sure if you are using a transform transition (Scale and Rotates), add a parent wrapper to ensure the right CSS3 perspective styles.
+        </p>
+        <div class="row">
+          <div class="col s12">
+            <table class="highlight">
+              <thead>
+                <tr>
+                    <th style="min-width: 80px;">Type</th>
+                    <th>Description</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>fade</td>
+                  <td>Transition opacity from 1 to 0.</td>
+                </tr>
+                <tr>
+                  <td>scale</td>
+                  <td>Transition scale from 1 to 0.</td>
+                </tr>
+                <tr>
+                  <td>up</td>
+                  <td>Transition element from down to up.</td>
+                </tr>
+                <tr>
+                  <td>right</td>
+                  <td>Transition element from left to right.</td>
+                </tr>
+                <tr>
+                  <td>down</td>
+                  <td>Transition element from up to down.</td>
+                </tr>
+                <tr>
+                  <td>left</td>
+                  <td>Transition element from up to down.</td>
+                </tr>
+                <tr>
+                  <td>rotate-y</td>
+                  <td>Transition rotation along the y axis.</td>
+                </tr>
+                <tr>
+                  <td>rotate-x</td>
+                  <td>Transition rotation along the x axis.</td>
+                </tr>
+
+              </tbody>
+            </table>
+            <pre><code class="language-markup">
+  &lt;!-- Normal Transitions -->
+  &lt;div class="fade-in-out">
+    &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+  &lt;/div>
+
+  &lt;div class="up-in-out">
+    &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+  &lt;/div>
+
+  &lt;div class="right-in-out">
+    &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+  &lt;/div>
+
+  &lt;div class="down-in-out">
+    &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+  &lt;/div>
+
+  &lt;div class="left-in-out">
+    &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+  &lt;/div>
+
+  &lt;!-- Transform Transitions -->
+  &lt;div class="transform-wrapper">
+    &lt;div class="scale-in-out">
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+  &lt;/div>
+
+  &lt;div class="transform-wrapper">
+    &lt;div class="rotate-y-in-out">
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+  &lt;/div>
+
+  &lt;div class="transform-wrapper">
+    &lt;div class="rotate-x-in-out">
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+  &lt;/div>
+  </code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="types" class="section scrollspy">
+        <h2 class="header">Transition Types</h2>
+        <div class="row">
+          <div class="col s12">
+            <p class="caption">
+
+            </p>
+            <table class="highlight">
+              <thead>
+                <tr>
+                    <th style="min-width: 80px;">Type</th>
+                    <th>Description</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>in-out</td>
+                  <td>This means the element starts in the out state and tweens to the in state.</td>
+                </tr>
+                <tr>
+                  <td>out-in</td>
+                  <td>This means the element starts in the in state and tweens to the out state.</td>
+                </tr>
+                <tr>
+                  <td>in</td>
+                  <td>This means the element starts in the in state and tweens to the out state, but only once. After the scroll is fully triggered, the element will stay in the out state.</td>
+                </tr>
+                <tr>
+                  <td>out</td>
+                  <td>This means the element starts in the out state and tweens to the in state, but only once. After the scroll is fully triggered, the element will stay in the in state.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+            <div class="col s12">
+              <br>
+              <pre><code class="language-markup">
+  &lt;div class="fade-in-out">
+    &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+  &lt;/div>
+
+  &lt;div class="fade-out-in">
+    &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+  &lt;/div>
+
+  &lt;div class="fade-in">
+    &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+  &lt;/div>
+
+  &lt;div class="fade-out">
+    &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+  &lt;/div></code></pre>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div id="staggered" class="section scrollspy">
+        <h2 class="header">Staggered Transitions</h2>
+        <p class="caption">
+          You can chain together element transitions and stagger their animations. Just wrap the transitions you want to be staggered in a
+        </p>
+        <div class="row">
+          <div class="col s12">
+            <div class="row staggered-transition-wrapper" data-duration="0" data-staggereddelay=".9">
+              <div class="col s12 m6 l4 fade-in-out">
+                <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+              </div>
+              <div class="col s12 m6 l4 fade-in-out">
+                <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+              </div>
+              <div class="col s12 m6 l4 fade-in-out">
+                <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+              </div>
+              <div class="col s12 m6 l4 fade-in-out">
+                <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+              </div>
+              <div class="col s12 m6 l4 fade-in-out">
+                <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+              </div>
+              <div class="col s12 m6 l4 fade-in-out">
+                <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+              </div>
+            </div>
+          </div>
+
+            <div class="col s12">
+              <br>
+              <pre><code class="language-markup">
+  &lt;div class="row staggered-transition-wrapper" data-duration="0" data-staggereddelay=".9">
+    &lt;div class="col s12 m6 l4 fade-in-out">
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+    &lt;div class="col s12 m6 l4 fade-in-out">
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+    &lt;div class="col s12 m6 l4 fade-in-out">
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+    &lt;div class="col s12 m6 l4 fade-in-out">
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+    &lt;div class="col s12 m6 l4 fade-in-out">
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+    &lt;div class="col s12 m6 l4 fade-in-out">
+      &lt;p class="caption">This is a cool feature about your product! It really separates you from the crowd.&lt;/p>
+    &lt;/div>
+  &lt;/div>
+            </code></pre>
+            <br>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col hide-on-small-only m3 l2">
+      <div class="toc-wrapper">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#types">Transition Types</a></li>
+            <li><a href="#staggered">Staggered Transitions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    </main>
+        <footer class="page-footer">
+      <div class="row">
+        <div class="col s10 offset-s1">
+          <div class="row">
+            <div class="col s6 m3">
+              <img class="materialize-logo" src="../images/gea_round.png" alt="">
+              <p>Made with love by Materialize.</p>
+            </div>
+            <div class="col s6 m3">
+              <h5>About</h5>
+              <ul>
+                <li><a href="#!">Blog</a></li>
+                <li><a href="#!">Pricing</a></li>
+                <li><a href="#!">Docs</a></li>
+              </ul>
+            </div>
+            <div class="col s6 m3">
+              <h5>Connect</h5>
+              <ul>
+                <li><a href="#!">Community</a></li>
+                <li><a href="#!">Subscribe</a></li>
+                <li><a href="#!">Email</a></li>
+              </ul>
+            </div>
+            <div class="col s6 m3">
+              <h5>Contact</h5>
+              <ul>
+                <li><a href="#!">Twitter</a></li>
+                <li><a href="#!">Facebook</a></li>
+                <li><a href="#!">Github</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="bin/jquery-2.1.1.min.js"><\/script>'); }
+    </script>
+
+    <!-- External libraries -->
+    <script src="../js/imagesloaded.pkgd.min.js"></script>
+    <script src="../js/masonry.pkgd.min.js"></script>
+    <script src="../js/TweenMax.min.js"></script>
+    <script src="../js/ScrollMagic.min.js"></script>
+    <script src="../js/animation.gsap.min.js"></script>
+    <script src="prism.js"></script>
+    <script src="../js/materialize.min.js"></script>
+
+    <script src="../js/gea.js"></script>
+    <script src="init.js"></script>
+
+  </body>
+</html>

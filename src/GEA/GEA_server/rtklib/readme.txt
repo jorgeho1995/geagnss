@@ -1,0 +1,1 @@
+xvfb-run -a /home/ubuntu/GEA/GEA_server/rtklib/rtknavi_qt --auto

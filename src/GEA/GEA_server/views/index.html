@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>GEA</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="css/gea-materialize.min.css">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar absolute">
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo"><img src="images/gea_logo.png" alt="GEA" style="width: 60px; margin-top: 2px;"></a>
+      <!--<ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="docs/about.html">Docs</a></li>
+      </ul>-->
+
+      <a href="#" data-activates="slide-out" class="button-collapse right"><i
+          class="material-icons white-text">menu</i></a>
+    </div>
+  </nav>
+  <ul id="slide-out" class="side-nav">
+    <!--<li><a class="waves-effect waves-teal" href="docs/about.html">Docs</a></li>-->
+  </ul>
+
+  <div class="header full-height horizontal-half-transition">
+    <div class="background">
+      <img src="images/multicoloured.png" alt="">
+    </div>
+    <div class="phone-preview-sizer">
+      <div class="phone-preview"></div>
+      <div class="image-container active" style="background-image:url(images/gea_status.png)"></div>
+      <div class="image-container" style="background-image:url(images/gea_log.png)"></div>
+      <div class="image-container" style="background-image:url(images/gea_rt.png)"></div>
+    </div>
+    <div class="horizontal-half-wrapper right-side active">
+      <div class="header-background black-gea"></div>
+      <div class="header-wrapper row valign-wrapper">
+        <div class="col s12 m8 offset-m2 valign">
+          <h1>GEA</h1>
+          <span class="tagline">Coming soon...</span>
+          <button class="read-more"><i class="icon-caret-down"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="horizontal-half-wrapper">
+      <div class="header-background log-gea"></div>
+      <div class="header-wrapper row valign-wrapper">
+        <div class="col s12 m8 offset-m2 valign">
+          <h1>GNSS Logger</h1>
+          <span class="tagline">Capture raw data from your device and store it in your account.</span>
+          <button class="read-more"><i class="icon-caret-down"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="horizontal-half-wrapper right-side">
+      <div class="header-background rt-gea"></div>
+      <div class="header-wrapper row valign-wrapper">
+        <div class="col s12 m8 offset-m2 valign">
+          <h1>Real Time</h1>
+          <span class="tagline">Launch real-time executions using Single, RTK or PPP. All your executions will be
+            registered in your account.</span>
+          <button class="read-more"><i class="icon-caret-down"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section valign-wrapper">
+    <div class="row valign">
+      <div class="col s12 m10 offset-m1">
+        <div class="row">
+          <div class="col s12">
+            <h2 class="section-title">Features</h2>
+          </div>
+          <div class="col s12 m6 l4">
+            <h4><i class="icon-light-bulb"></i></h4>
+            <p class="caption">GEA is a Cloud Computing app which allows you to get the most out of the GNSS data from your smartphone.</p>
+          </div>
+          <div class="col s12 m6 l4">
+            <h4><i class="icon-map"></i></h4>
+            <p class="caption">Access the GNSS Status of your device. Check the state of the sky for the constellations of GPS, Galileo, GLONASS and Beidou.</p>
+          </div>
+          <div class="col s12 m6 l4">
+            <h4><i class="icon-add-user"></i></h4>
+            <p class="caption">Sign in or create your account and start logging your activity. To use the app it is required that you accept the location and storage permissions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  <div class="section light full-height">
+    <div class="row">
+      <div class="col s12 m10 offset-m1 center">
+        <h1>blog</h1>
+        <div class="row masonry-grid">
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <a href="blog.html"><img src="http://placehold.it/600x400"></a>
+                <span class="card-title">Something Interesting</span>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <a href="blog.html"><img src="http://placehold.it/600x400"></a>
+                <span class="card-title">Another Blog Post</span>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <a href="blog.html"><img src="http://placehold.it/600x400"></a>
+                <span class="card-title">Click Bait Article</span>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <a href="blog.html"><img src="http://placehold.it/600x400"></a>
+                <span class="card-title">Don't Read This!</span>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <a href="blog.html"><img src="http://placehold.it/600x400"></a>
+                <span class="card-title">Why Are You Still Reading?</span>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <a href="blog.html"><img src="http://placehold.it/600x400"></a>
+                <span class="card-title">Good Bye</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Contact Us -->
+  <div class="section light valign-wrapper">
+    <div class="container">
+      <form>
+        <div class="row">
+          <div class="col s12">
+            <h2 class="section-title">Contact Us</h2>
+          </div>
+          <div class="input-field col s6">
+            <input id="subjectID" type="text">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="input-field col s12">
+            <textarea id="messageID" class="materialize-textarea"></textarea>
+            <label for="message">Message</label>
+            <a onclick="javascript: window.location.href='mailto:geagnss@gmail.com?subject=' + $('#subjectID').val() + '&body=' + $('#messageID').val();" class="waves-effect waves-light btn-large">Send</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s6 m3">
+          <img class="materialize-logo" src="images/gea_round.png" alt="">
+          <p>© 2023 GEA, All rights reserved.</p>
+        </div>
+        <!--
+        <div class="col s6 m3">
+          <h5>About</h5>
+          <ul>
+            <li><a href="#!">Blog</a></li>
+            <li><a href="#!">Pricing</a></li>
+            <li><a href="#!">Docs</a></li>
+          </ul>
+        </div>
+        <div class="col s6 m3">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="#!">Community</a></li>
+            <li><a href="#!">Subscribe</a></li>
+            <li><a href="#!">Email</a></li>
+          </ul>
+        </div>
+        <div class="col s6 m3">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="#!">Twitter</a></li>
+            <li><a href="#!">Facebook</a></li>
+            <li><a href="#!">Github</a></li>
+          </ul>
+        </div>-->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+
+  <!-- External libraries -->
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/ScrollMagic.min.js"></script>
+  <script src="js/animation.gsap.min.js"></script>
+
+  <!-- Initialization script -->
+  <script src="js/gea.js"></script>
+  <script src="js/init.js"></script>
+</body>
+
+</html>

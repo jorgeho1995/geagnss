@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="gea is a perfect theme for showcasing your new app, company or project.">
+    <title>Intro Transitions - gea</title>
+
+    <!-- CSS-->
+    <link href="prism.css" rel="stylesheet">
+    <link href="../css/gea-materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="../css/docs.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper"><a class="page-title">Intro Transitions</a></div>
+        </div>
+      </nav>
+      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons white-text">menu</i></a></div>
+      <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo"><a id="logo-container" href="http://materializecss.com/" class="brand-logo"><img class="materialize-logo" src="../images/gea_round.png" alt=""></a></li>
+        <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+              <a class="collapsible-header waves-effect waves-teal">CSS</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-teal" href="transitions.html">Transition Options</a></li>
+                  <li><a class="waves-effect waves-teal" href="color.html">Color</a></li>
+                  <li><a class="waves-effect waves-teal" href="basic-elements.html">Basic Elements</a></li>
+                  <li><a class="waves-effect waves-teal" href="devices.html">Devices</a></li>
+                  <li><a class="waves-effect waves-teal" href="pricing.html">Pricing Table</a></li>
+                  <li><a class="waves-effect waves-teal" href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold">
+              <a class="collapsible-header active waves-effect waves-teal">Transitions</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a class="waves-effect waves-teal" href="transitions.html">Transition Options</a></li>
+                  <li><a class="waves-effect waves-teal" href="element-transitions.html">Element</a></li>
+                  <li><a class="waves-effect waves-teal" href="section-transitions.html">Section</a></li>
+                  <li class="active"><a class="waves-effect waves-teal" href="intro-transitions.html">Intro</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col s12 m9 l10">
+
+
+      <div id="halves" class="section scrollspy">
+        <p class="caption">Our intro transitions are the more complex and unique scrolling transitions, each with highly specialized animations.</p>
+        <h2 class="header">Horizontal Halves</h2>
+        <p class="caption">
+          There are a couple of classes that you need to add to make this component work well.
+        </p>
+        <a href="../index.html" class="btn dark">View Demo</a>
+        <div class="row">
+          <!-- Horizontal Halves-->
+          <div class="col s12">
+            <table class="highlight">
+              <thead>
+                <tr>
+                    <th style="min-width: 100px;">Class</th>
+                    <th>Description</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>right-side</td>
+                  <td>This anchors the white content element to the right.</td>
+                </tr>
+                <tr>
+                  <td>active</td>
+                  <td>You should add the active class to the first horizontal-half-wrapper if it is at the very top of the page.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col s12">
+            <br>
+            <pre><code class="language-markup">
+  &lt;div class="header full-height horizontal-half-transition">
+    &lt;div class="background">
+      &lt;img src="images/trees.jpg" alt="">
+    &lt;/div>
+    &lt;div class="phone-preview-sizer">
+      &lt;div class="phone-preview">&lt;/div>
+      &lt;div class="image-container active" style="background-image:url(images/poly5.jpg)">&lt;/div>
+      &lt;div class="image-container" style="background-image:url(images/poly3.jpg)">&lt;/div>
+      &lt;div class="image-container" style="background-image:url(images/poly2.jpg)">&lt;/div>
+    &lt;/div>
+    &lt;div class="horizontal-half-wrapper right-side active">
+      &lt;div class="header-background">&lt;/div>
+      &lt;div class="header-wrapper row valign-wrapper">
+        &lt;div class="col s8 offset-s2 valign">
+          &lt;h1>gea!&lt;/h1>
+          &lt;span class="tagline">Show off your business in a whole new way.&lt;/span>
+          &lt;button class="read-more">&lt;i class="icon-caret-down">&lt;/i>&lt;/button>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+    &lt;!-- Can Repeat with horizontal-half-wrapper -->
+  &lt;/div></code></pre>
+            <br>
+
+            <p class="caption">
+              You can chain together multiple wrappers to create a long string of halves. The main demo has 3 wrappers chained together. They should alternate left and right sides.
+            </p>
+            <pre><code class="language-markup">
+  &lt;div class="horizontal-half-wrapper">
+    &lt;div class="header-background">&lt;/div>
+    &lt;div class="header-wrapper row valign-wrapper">
+      &lt;div class="col s8 offset-s2 valign">
+        &lt;h1>gea!&lt;/h1>
+        &lt;span class="tagline">Show off your business in a whole new way.&lt;/span>
+        &lt;button class="read-more">&lt;i class="icon-caret-down">&lt;/i>&lt;/button>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="sierra" class="section scrollspy">
+        <h2 class="header">Zoom Out Laptop</h2>
+        <p class="caption">
+          Make sure the image you use as the background is high resolution because it will be fullscreen and slightly scaled up. This transition was inspired by the macOS sierra website.
+        </p>
+        <a href="../sierra.html" class="btn dark">View Demo</a>
+        <div class="row">
+          <div class="col s12">
+            <br>
+            <pre><code class="language-markup">
+  &lt;div id="zoom-out-intro" class="header full-height">
+    &lt;div class="header-wrapper row valign-wrapper">
+      &lt;div class="col s8 offset-s2 valign">
+        &lt;h1>gea!&lt;/h1>
+        &lt;span class="tagline">Show off your business in a whole new way.&lt;/span>
+        &lt;button class="read-more">&lt;i class="icon-caret-down">&lt;/i>&lt;/button>
+      &lt;/div>
+    &lt;/div>
+    &lt;div class="laptop-preview-sizer">
+      &lt;div class="laptop-preview">&lt;/div>
+      &lt;div class="image-container default" style="background-image:url(images/poly5.jpg)">&lt;/div>
+    &lt;/div>
+  &lt;/div></code></pre>
+            <br>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="reveal" class="section scrollspy">
+        <div class="row">
+          <!-- Postcards -->
+          <div class="col s12">
+            <h2 class="header">Circle Reveal</h2>
+            <p class="caption">If you want to have uniformly sized cards, you can use our premade size classes. Just add the size class in addition to the card class. </p>
+            <a href="../circle-reveal.html" class="btn dark">View Demo</a>
+            <br><br>
+
+            <pre><code class="language-markup">
+  &lt;div class="circle-reveal-intro full-height">
+    &lt;div class="fixed-wrapper">
+
+      &lt;!-- circle-reveal-wrapper -->
+      &lt;div class="circle-reveal-wrapper header">
+        &lt;div class="circle-background white">&lt;/div>
+        &lt;div class="header-wrapper row valign-wrapper">
+          &lt;div class="col s8 offset-s2">
+            &lt;h1>FIRST!&lt;/h1>
+            &lt;span class="tagline">Show off your business in a whole new way.&lt;/span>
+            &lt;button class="read-more">&lt;i class="icon-caret-down">&lt;/i>&lt;/button>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!-- circle-reveal-wrapper is chainable -->
+      &lt;div class="circle-reveal-wrapper header">
+        &lt;!-- ... -->
+      &lt;/div>
+    &lt;/div>
+
+    &lt;!-- Last layer that is behind and static -->
+    &lt;div class="background-layer">
+      &lt;!-- Content -->
+    &lt;/div>
+  &lt;/div></code></pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="wall" class="section scrollspy">
+        <h2 class="header">Phone Wall</h2>
+        <p class="caption">
+          The phone wall is comprised of 7 columns of 3 phones. You can alter the amount of columns.
+        </p>
+        <a href="../phone-wall.html" class="btn dark">View Demo</a>
+        <div class="row">
+          <!-- Phone Wall -->
+          <div class="col s12">
+            <br>
+            <pre><code class="language-markup">
+
+  &lt;div class="phone-wall-intro header white full-height">
+    &lt;div class="header-background">&lt;/div>
+    &lt;div class="header-wrapper row">
+      &lt;div class="col s12 m10 offset-m1 valign-wrapper">
+        &lt;div class="valign">
+          &lt;h1>gea!&lt;/h1>
+          &lt;span class="tagline">Show off your business in a whole new way.&lt;/span>
+          &lt;button class="read-more">&lt;i class="icon-caret-down">&lt;/i>&lt;/button>
+        &lt;/div>
+      &lt;/div>
+      &lt;div class="col s12 m10 offset-m1 column-wrapper">
+        &lt;div class="column-two">
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly1.jpg)">&lt;/div>
+          &lt;/div>
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly2.jpg)">&lt;/div>
+          &lt;/div>
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly3.jpg)">&lt;/div>
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="column-one">
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly1.jpg)">&lt;/div>
+          &lt;/div>
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly2.jpg)">&lt;/div>
+          &lt;/div>
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly3.jpg)">&lt;/div>
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="column-two">
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly1.jpg)">&lt;/div>
+          &lt;/div>
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly2.jpg)">&lt;/div>
+          &lt;/div>
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly3.jpg)">&lt;/div>
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="column-one">
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly1.jpg)">&lt;/div>
+          &lt;/div>
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly2.jpg)">&lt;/div>
+          &lt;/div>
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly3.jpg)">&lt;/div>
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="column-two">
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly1.jpg)">&lt;/div>
+          &lt;/div>
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly2.jpg)">&lt;/div>
+          &lt;/div>
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly3.jpg)">&lt;/div>
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="column-one">
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly1.jpg)">&lt;/div>
+          &lt;/div>
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly2.jpg)">&lt;/div>
+          &lt;/div>
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly3.jpg)">&lt;/div>
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="column-two">
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly1.jpg)">&lt;/div>
+          &lt;/div>
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly2.jpg)">&lt;/div>
+          &lt;/div>
+          &lt;div class="phone-preview-sizer">
+            &lt;div class="phone-preview">&lt;/div>
+            &lt;div class="image-container default" style="background-image:url(images/poly3.jpg)">&lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+            </code></pre>
+            <br>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col hide-on-small-only m3 l2">
+      <div class="toc-wrapper">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#halves">Horizontal Halves</a></li>
+            <li><a href="#sierra">Zoom Out Laptop</a></li>
+            <li><a href="#reveal">Circle Reveal</a></li>
+            <li><a href="#wall">Phone Wall</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    </main>
+        <footer class="page-footer">
+      <div class="row">
+        <div class="col s10 offset-s1">
+          <div class="row">
+            <div class="col s6 m3">
+              <img class="materialize-logo" src="../images/gea_round.png" alt="">
+              <p>Made with love by Materialize.</p>
+            </div>
+            <div class="col s6 m3">
+              <h5>About</h5>
+              <ul>
+                <li><a href="#!">Blog</a></li>
+                <li><a href="#!">Pricing</a></li>
+                <li><a href="#!">Docs</a></li>
+              </ul>
+            </div>
+            <div class="col s6 m3">
+              <h5>Connect</h5>
+              <ul>
+                <li><a href="#!">Community</a></li>
+                <li><a href="#!">Subscribe</a></li>
+                <li><a href="#!">Email</a></li>
+              </ul>
+            </div>
+            <div class="col s6 m3">
+              <h5>Contact</h5>
+              <ul>
+                <li><a href="#!">Twitter</a></li>
+                <li><a href="#!">Facebook</a></li>
+                <li><a href="#!">Github</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="bin/jquery-2.1.1.min.js"><\/script>'); }
+    </script>
+    <script src="prism.js"></script>
+    <script src="../js/materialize.min.js"></script>
+    <script src="init.js"></script>
+
+  </body>
+</html>
