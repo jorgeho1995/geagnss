@@ -1,5 +1,7 @@
 # GEA GNSS
 
+[![Actions Status](https://github.com/jorgeho1995/geagnss/workflows/App%20build%20test/badge.svg)](https://github.com/jorgeho1995/geagnss/actions?query=workflow%3A%22App+build+test%22)
+
 This repository contains the code for my doctoral thesis.
 
 ## Description

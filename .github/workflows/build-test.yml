@@ -1,0 +1,33 @@
+name: App build test
+
+on:
+    schedule:
+        - cron: "0 0 * * *"
+        
+    pull_request:
+        branches:
+            - main
+    push:
+        branches:
+            - main
+defaults:
+    run:
+        working-directory: ./src/GEA/gea
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Set up Google Services
+              run: echo ${{ secrets.GOOGLE_SERVICES_JSON }} | base64 -d > android/app/google-services.json
+            - uses: actions/setup-java@v2
+              with:
+                distribution: 'zulu'
+                java-version: '11'
+            - uses: subosito/flutter-action@v2
+              with:
+                flutter-version: '3.3.10'
+                channel: 'stable'
+            - run: flutter pub get
+            - run: flutter build apk
+            - run: flutter build appbundle
