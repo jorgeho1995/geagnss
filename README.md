@@ -8,8 +8,9 @@ GEA is a specialized tool designed to process raw GNSS data collected from Andro
 
 ## Papers
 
-- [Python Toolbox for Android GNSS Raw Data to RINEX Conversion](https://link.springer.com/article/10.1007/s10291-024-01631-9)
-- [Navigating Latency Hurdles: An In-Depth Examination of a Cloud-Powered GNSS Real-Time Positioning Application on Mobile Devices (preprint)](https://www.researchsquare.com/article/rs-4200024/v1)
+- [Real-time cloud computing of GNSS measurements from smartphones and mobile devices for enhanced positioning and navigation](https://doi.org/10.1007/s10291-024-01705-8)
+- [Python Toolbox for Android GNSS Raw Data to RINEX Conversion](https://doi.org/10.1007/s10291-024-01631-9)
+- [Navigating Latency Hurdles: An In-Depth Examination of a Cloud-Powered GNSS Real-Time Positioning Application on Mobile Devices](https://doi.org/10.1038/s41598-024-65652-7)
 
 ## License
 
