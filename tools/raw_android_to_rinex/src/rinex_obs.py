@@ -304,6 +304,13 @@ def get_cphase_doppler(obs: Dict[str, Any]) -> Dict[str, Any]:
     if psdo_range_rate_ms != 0.0:
         doppler = -psdo_range_rate_ms / wavelength
 
+    # Check doppler and phase
+    if cphase < -100000000.0 or cphase > 100000000.0:
+        cphase = 0.0
+    
+    if doppler < -5000 or doppler > 5000.0:
+        doppler = 0.0
+
     return {"carrierPhase": cphase, "doppler": doppler}
 
 
