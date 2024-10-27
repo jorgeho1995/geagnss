@@ -20,6 +20,7 @@
 #                  Accessed 23 Nobember 2023
 #
 # History    : 2023/11/23 1.0  First version
+#              2024/10/27 1.1  Include BDS III Signals (B1C, B2A, B2B)
 #
 # ---------------------------------------------------------------------------
 """
@@ -106,7 +107,7 @@ def main() -> None:
     # Create Header
     logging.info("Formatting RINEX 3 Header...")
     header = create_header(
-        "Android RINEX 1.0",
+        "Android RINEX 1.1",
         "UPV",
         log_dict["app_station"],
         "",

@@ -20,6 +20,7 @@
 #                  Accessed 23 Nobember 2023
 #
 # History    : 2023/11/23 1.0  First version
+#              2024/10/27 1.1  Include BDS III Signals (B1C, B2A, B2B)
 #
 # ---------------------------------------------------------------------------
 """
@@ -81,9 +82,15 @@ def band(carrier_freq: float) -> int:
     # QZSS L1, GPS L1, GAL E1, and GLO L1
     if freq_int >= 154:
         bn = 1
-    # QZSS L5, GPS L5, GAL E5
+    # QZSS L5, GPS L5, GAL E5, BDS B2A
     elif freq_int == 115:
         bn = 5
+    # BDS B2B
+    elif freq_int == 118:
+        bn = 7
+    # BDS B3I
+    elif freq_int == 118:
+        bn = 7
     # BDS B1I
     elif freq_int == 153:
         bn = 2
@@ -117,9 +124,18 @@ def rnx_band_letter(cons_type: int, bn: int, state: int) -> str:
     if bn == 5:
         band_letter = "Q"
 
-    # B1I
-    if bn == 2 and cons_type == BEIDOU:
-        band_letter = "I"
+    # BDS cases
+    if cons_type == BEIDOU:
+        if bn == 1: # BDS B1C
+            band_letter = "D"
+        elif bn == 2: # BDS B1I
+            band_letter = "I"
+        elif bn == 5: # BDS B2A
+            band_letter = "D"
+        elif bn == 7: # BDS B2B
+            band_letter = "D"
+        elif bn == 6: # BDS B3I
+            band_letter = "I"
 
     return band_letter
 
