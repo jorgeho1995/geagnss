@@ -153,7 +153,7 @@ def rnx3_header_rec_type_version(rec: str, rec_type: str, version: str) -> str:
     end_line = "REC # / TYPE / VERS"
 
     # Line
-    head_line = f"{rec:20s}{rec_type:20s}{version:20s}{end_line}\n"
+    head_line = f"{rec[:20]:20s}{rec_type[:20]:20s}{version[:20]:20s}{end_line}\n"
 
     return head_line
 
