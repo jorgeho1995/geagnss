@@ -288,7 +288,7 @@ def get_cphase_doppler(obs: Dict[str, Any]) -> Dict[str, Any]:
         )
         else 0.0
     )
-    cphase = ""
+    cphase = 0.0
     state_adr = obs["AccumulatedDeltaRangeState"]
     if (state_adr & 2 ^ 1) != 0:
         cphase = acc_delta_range_metters / wavelength
@@ -300,7 +300,7 @@ def get_cphase_doppler(obs: Dict[str, Any]) -> Dict[str, Any]:
         )
         else 0.0
     )
-    doppler = ""
+    doppler = 0.0
     if psdo_range_rate_ms != 0.0:
         doppler = -psdo_range_rate_ms / wavelength
 
@@ -379,7 +379,7 @@ def process_obs(obs: Dict[str, Any]) -> Any:
         logging.warning(
             "Skip band %s for sat %s at %s. No valid parameters.",
             str(carrier_freq_hz),
-            str(svid),
+            sat,
             str(date_gps),
         )
         return None
@@ -393,10 +393,11 @@ def process_obs(obs: Dict[str, Any]) -> Any:
 
     if sat_sys == SAT_SYSTEM_LETTER[UNKNOWN] or fr_code == "Invalid":
         logging.warning(
-            "Skip band %s for sat %s at %s. No valid Satellite System.",
+            "Skip band %s for sat %s at %s. No valid Satellite System. (%s)",
             str(carrier_freq_hz),
-            str(svid),
+            sat,
             str(date_gps),
+            sat_sys
         )
         return None
 
@@ -418,10 +419,11 @@ def process_obs(obs: Dict[str, Any]) -> Any:
     # Check if psdorange is valid
     if psdorange < 0.0 or psdorange > 100000000.0:
         logging.warning(
-            "Skip band %s for sat %s at %s. No valid pseudorange.",
+            "Skip band %s for sat %s at %s. No valid pseudorange. (%s)",
             str(carrier_freq_hz),
-            str(svid),
+            sat,
             str(date_gps),
+            str(psdorange)
         )
         return None
 
