@@ -131,9 +131,9 @@ def rnx_band_letter(cons_type: int, bn: int, state: int) -> str:
         elif bn == 2: # BDS B1I
             band_letter = "I"
         elif bn == 5: # BDS B2A
-            band_letter = "D"
+            band_letter = "P"
         elif bn == 7: # BDS B2B
-            band_letter = "D"
+            band_letter = "P"
         elif bn == 6: # BDS B3I
             band_letter = "I"
 
