@@ -62,6 +62,12 @@ GPS_WEEKSECS = 604800
 NS_TO_S = 1.0e-9
 SPEED_OF_LIGHT = 299792458.0
 
+ADR_STATE_UNKNOWN = int(0x00000000)
+ADR_STATE_VALID = int(0x00000001)
+ADR_STATE_RESET = int(0x00000002)
+ADR_STATE_HALF_CYCLE_RESOLVED = int(0x00000008)
+ADR_STATE_HALF_CYCLE_REPORTED = int(0x00000010)
+ADR_STATE_CYCLE_SLIP = int(0x00000004)
 
 def band(carrier_freq: float) -> int:
     """
@@ -185,7 +191,7 @@ def get_epoch_datetime(
     time_nanos: float, full_bias_nanos: float, bias_nanos: float
 ) -> datetime.datetime:
     """
-    Get SEpoch in Datetime format
+    Get Epoch in Datetime format
 
     :param  time_nanos:     Time Nanoseconds
     :param  full_bias_nanos:Full Bias Nanoseconds
@@ -288,11 +294,21 @@ def get_cphase_doppler(obs: Dict[str, Any]) -> Dict[str, Any]:
         )
         else 0.0
     )
-    cphase = 0.0
-    state_adr = obs["AccumulatedDeltaRangeState"]
-    if (state_adr & 2 ^ 1) != 0:
-        cphase = acc_delta_range_metters / wavelength
 
+    cphase = acc_delta_range_metters / wavelength
+    state_adr = obs["AccumulatedDeltaRangeState"]
+
+    # Check ADR Status
+    if (state_adr & ADR_STATE_RESET) != 0 or (state_adr & ADR_STATE_CYCLE_SLIP) != 0:
+        cphase = 0
+
+    if (state_adr & ADR_STATE_HALF_CYCLE_REPORTED) != 0 and abs(cphase) >= 1:
+        cphase += 0.5
+
+    if (state_adr & ADR_STATE_UNKNOWN) != 0 or (state_adr & ADR_STATE_VALID) == 0:
+        cphase = 0.0
+
+    # Get Doppler
     psdo_range_rate_ms = (
         obs["PseudorangeRateMetersPerSecond"]
         if check_value(
@@ -304,17 +320,14 @@ def get_cphase_doppler(obs: Dict[str, Any]) -> Dict[str, Any]:
     if psdo_range_rate_ms != 0.0:
         doppler = -psdo_range_rate_ms / wavelength
 
-    # Check doppler and phase
-    if cphase < -100000000.0 or cphase > 100000000.0:
-        cphase = 0.0
-    
+    # Check doppler
     if doppler < -5000 or doppler > 5000.0:
         doppler = 0.0
 
     return {"carrierPhase": cphase, "doppler": doppler}
 
 
-# pylint: disable=too-many-locals
+# pylint: disable=too-many-locals,too-many-branches
 def process_obs(obs: Dict[str, Any]) -> Any:
     """
     Process Observation
@@ -374,6 +387,12 @@ def process_obs(obs: Dict[str, Any]) -> Any:
     # GPS Epoch
     date_gps = get_epoch_datetime(time_nanos, full_bias_nanos, bias_nanos)
 
+    # Get Satellite System
+    sat_sys = sat_system_letter(cons_type, svid)
+    if svid >= 100:
+        svid -= 100
+    sat = f"{sat_sys}{svid:02d}"
+
     # Return if any parameter is invalid
     if not valid_params:
         logging.warning(
@@ -383,10 +402,6 @@ def process_obs(obs: Dict[str, Any]) -> Any:
             str(date_gps),
         )
         return None
-
-    # Get Satellite System
-    sat_sys = sat_system_letter(cons_type, svid)
-    sat = (sat_sys + str(svid)) if svid > 9 else (sat_sys + "0" + str(svid))
 
     # Get Obs Code
     fr_code = freq_code(carrier_freq_hz, cons_type, state)
@@ -412,12 +427,11 @@ def process_obs(obs: Dict[str, Any]) -> Any:
         )
         return None
 
-    # Calculate Carrier Phase and Doppler
+    # Get psdorange
     psdorange = get_psdorange(obs)
-    cphase_doppler = get_cphase_doppler(obs)
 
     # Check if psdorange is valid
-    if psdorange < 0.0 or psdorange > 100000000.0:
+    if psdorange <= 0.0 or psdorange > 100000000.0:
         logging.warning(
             "Skip band %s for sat %s at %s. No valid pseudorange. (%s)",
             str(carrier_freq_hz),
@@ -426,6 +440,9 @@ def process_obs(obs: Dict[str, Any]) -> Any:
             str(psdorange)
         )
         return None
+
+    # Calculate Carrier Phase and Doppler
+    cphase_doppler = get_cphase_doppler(obs)
 
     return {
         "sat": sat,
@@ -473,16 +490,18 @@ def rnx3_obs(obs_list: List[Any], obs_freq_av: Dict[str, Any]) -> str:
 
             # Create line
             obs = sat_obs[key]
-            obs_str = f"{obs:14.3f}"
+            obs_str = f"{' ':16}"
+            if obs != 0.0:
+                obs_str = f"{obs:16.3f}"
             obs_sort[pos] = obs_str
 
     # Line
     fr_list = obs_freq_av[sat_sys]
     for k, value in enumerate(fr_list):
         # Get available values
-        obs_str = " "
-        obs_str = obs_sort.get(k, f"{obs_str:14s}")
-        obs_line += f"{obs_str}" if k == 0 else f"  {obs_str}"
+        obs_str = ""
+        obs_str = obs_sort.get(k, f"{obs_str:16s}")
+        obs_line += f"{obs_str}"
 
     return obs_line
 
@@ -498,7 +517,7 @@ def rnx3_epoch(gps_datetime: datetime.datetime, num_sats: int) -> str:
     """
     # Line
     date = f'> {gps_datetime.strftime("%Y %m %d %H %M %S.")}'
-    milli = f"{int(gps_datetime.microsecond):06d}"
+    milli = f"{int(gps_datetime.microsecond):07d}"
     time = f"{date}{milli}"
     epoch_line = f"{time}  0 {num_sats:2d}\n"
 

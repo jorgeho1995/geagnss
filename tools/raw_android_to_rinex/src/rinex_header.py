@@ -275,6 +275,7 @@ def rnx3_header_end() -> str:
 
 # pylint: disable=too-many-arguments
 # pylint: disable=too-many-locals
+# pylint: disable=too-many-positional-arguments
 def create_header(
     pgm: str,
     runby: str,
