@@ -231,6 +231,18 @@ def check_state(cons_type: int, state: int) -> bool:
     return is_valid
 
 
+def adjust_glonass_tod(tod_seconds: float) -> float:
+    """
+    Adjust GLONASS Time of Day (TOD) for rollovers and consistency.
+
+    :param  tod_seconds:    Raw time of day in seconds.
+    :return tod_seconds     Adjusted TOD in seconds.
+    """
+    if tod_seconds > 86400:
+        tod_seconds %= 86400
+    return tod_seconds
+
+
 def get_psdorange(obs: Dict[str, Any]) -> float:
     """
     Calculate Pseudorange
@@ -257,6 +269,8 @@ def get_psdorange(obs: Dict[str, Any]) -> float:
         trx = (trx * NS_TO_S - gps_week * GPS_WEEKSECS) * 1e9
     elif cons_type == GLONASS:
         trx = ((trx * NS_TO_S) - (gps_day * DAYSEC) + (3 * 3600) - 18) * 1e9
+        trx = adjust_glonass_tod(trx * NS_TO_S) * 1e9
+        ttx = adjust_glonass_tod(ttx * NS_TO_S) * 1e9
     elif cons_type == BEIDOU:
         trx = (trx * NS_TO_S - gps_week * GPS_WEEKSECS - BDST_TO_GPST) * 1e9
 
