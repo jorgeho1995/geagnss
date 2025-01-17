@@ -531,8 +531,8 @@ def rnx3_epoch(gps_datetime: datetime.datetime, num_sats: int) -> str:
     """
     # Line
     date = f'> {gps_datetime.strftime("%Y %m %d %H %M %S.")}'
-    milli = f"{int(gps_datetime.microsecond):07d}"
-    time = f"{date}{milli}"
+    nano = f"{gps_datetime.microsecond * 1000:07d}"
+    time = f"{date}{nano}"
     epoch_line = f"{time}  0 {num_sats:2d}\n"
 
     return epoch_line
@@ -584,19 +584,22 @@ def create_obs(raw: List[Any], obs_freq_av: Dict[str, Any]) -> Dict[str, Any]:
                     epoch_datetime = obs_dict_fr["firstEpoch"] = obs_dict["gpsDatetime"]
                     first_epoch = True
 
-                # Save in dict per satellite
-                if obs_dict["sat"] not in obs_dict_per_epoch:
-                    obs_dict_per_epoch[obs_dict["sat"]] = []
-                    obs_dict_per_epoch[obs_dict["sat"]].append(obs_dict)
-                    num_sats += 1
-                else:
-                    obs_dict_per_epoch[obs_dict["sat"]].append(obs_dict)
-
                 # Chek if same epoch
-                if epoch != time_nanos or i == len(raw) - 1:
+                last_epoch = i == len(raw) - 1
+                if epoch != time_nanos or last_epoch:
                     # Print previous block
                     epoch_line = rnx3_epoch(epoch_datetime, num_sats)
                     obs_str += epoch_line
+
+                    # Append last observation
+                    if last_epoch:
+                        # Save in dict per satellite
+                        if obs_dict["sat"] not in obs_dict_per_epoch:
+                            obs_dict_per_epoch[obs_dict["sat"]] = []
+                            obs_dict_per_epoch[obs_dict["sat"]].append(obs_dict)
+                            num_sats += 1
+                        else:
+                            obs_dict_per_epoch[obs_dict["sat"]].append(obs_dict)
 
                     # Sort
                     sorted_keys = sorted(obs_dict_per_epoch.keys(), key=system_sort)
@@ -613,7 +616,22 @@ def create_obs(raw: List[Any], obs_freq_av: Dict[str, Any]) -> Dict[str, Any]:
                     epoch = time_nanos
                     num_sats = 0
                     obs_dict_per_epoch = {}
+                    
+                    # Save in dict per satellite
+                    if obs_dict["sat"] not in obs_dict_per_epoch:
+                        obs_dict_per_epoch[obs_dict["sat"]] = []
+                        obs_dict_per_epoch[obs_dict["sat"]].append(obs_dict)
+                        num_sats += 1
+                    else:
+                        obs_dict_per_epoch[obs_dict["sat"]].append(obs_dict)
                 else:
+                    # Save in dict per satellite
+                    if obs_dict["sat"] not in obs_dict_per_epoch:
+                        obs_dict_per_epoch[obs_dict["sat"]] = []
+                        obs_dict_per_epoch[obs_dict["sat"]].append(obs_dict)
+                        num_sats += 1
+                    else:
+                        obs_dict_per_epoch[obs_dict["sat"]].append(obs_dict)
                     epoch_datetime = obs_dict["gpsDatetime"]
 
     obs_dict_fr["obsString"] = obs_str
