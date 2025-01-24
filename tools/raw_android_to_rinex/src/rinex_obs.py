@@ -531,7 +531,7 @@ def rnx3_epoch(gps_datetime: datetime.datetime, num_sats: int) -> str:
     """
     # Line
     date = f'> {gps_datetime.strftime("%Y %m %d %H %M %S.")}'
-    nano = f"{gps_datetime.microsecond * 1000:07d}"
+    nano = f"{gps_datetime.microsecond * 1000:09d}"[:7]
     time = f"{date}{nano}"
     epoch_line = f"{time}  0 {num_sats:2d}\n"
 
